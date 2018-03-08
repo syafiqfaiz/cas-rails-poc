@@ -34,14 +34,16 @@ test:
 production:
   <<: *defaults
   authenticators:
-    my_company_ldap:
-      authenticator: "LDAP"
+    my_user_database:
+      authenticator: "ActiveRecord"
       options:
-        host: "localhost"
-        port: 12445
-        base: "dc=users,dc=example.com"
-        username_attribute: "uid"
-        encryption: "simple_tls"
+        connection:
+          adapter: "postgresql"
+          host: "localhost"
+          database: "casino_server_poc_development"
+        table: "users"
+        username_column: "username"
+        password_column: "password"
         extra_attributes:
-          email: "mail"
-          fullname: "displayname"
+          email: "email_database_column"
+          fullname: "displayname_database_column"
