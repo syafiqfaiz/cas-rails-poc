@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:syafiqfaiz/CASino.git
+  remote: https://github.com/syafiqfaiz/CASino.git
   revision: 723dd0d1db59a18105e7f1031a33bfe607383e5b
   specs:
     casino (5.0.0)
